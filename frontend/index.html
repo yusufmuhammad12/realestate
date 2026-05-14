@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="preloader-logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.7l6 5.3v9h-2v-6H8v6H6v-9l6-5.3z" />
+            </svg>
+            Real Estate
+        </div>
+        <div class="spinner"></div>
+    </div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.7l6 5.3v9h-2v-6H8v6H6v-9l6-5.3z" />
+            </svg>
+            Real Estate
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="new_projects.html">New Projects</a></li>
+                <li><a href="dashboard.html">Add Property</a></li>
+                <li><a href="login.html" class="btn btn-outline">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find Your Dream Home Today</h1>
+                <p>Search for villas, apartments, and houses to rent or buy.</p>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search by project..."
+                        onkeypress="if(event.key === 'Enter') searchProperties()">
+                    <button class="btn btn-primary" onclick="searchProperties()">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Properties</h2>
+            <div class="property-grid" id="featured-grid">
+                <!-- Properties will be injected here by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Real Estate Management System. All rights reserved.</p>
+        <p>Developed by: Youssef Mohammed Ebrahim, Abd El-Latif Mohammed, Moaz Nader, Youssef Mohammed Salah, Mohab
+            Mahmoud</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderFeaturedProperties === 'function') {
+                renderFeaturedProperties();
+            }
+        });
+    </script>
+</body>
+
+</html>

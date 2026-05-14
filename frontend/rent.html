@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate | Rent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.7l6 5.3v9h-2v-6H8v6H6v-9l6-5.3z" />
+            </svg>
+            Real Estate
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html" class="active">Rent</a></li>
+                <li><a href="new_projects.html">New Projects</a></li>
+                <li><a href="dashboard.html">Add Property</a></li>
+                <li><a href="login.html" class="btn btn-outline">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="page-header">
+            <h1>Properties for Rent</h1>
+        </div>
+
+        <!-- Search Filter Bar -->
+        <div class="search-filter-bar">
+            <select id="filter-developer" onchange="filterListings('Rent')">
+                <option value="">All Developers</option>
+                <option value="Palm Hills">Palm Hills</option>
+                <option value="Emaar Misr">Emaar Misr</option>
+                <option value="Ora">Ora</option>
+            </select>
+            <select id="filter-project" onchange="filterListings('Rent')">
+                <option value="">All Projects</option>
+                <option value="Palm Hills October">Palm Hills October</option>
+                <option value="Hacienda">Hacienda</option>
+                <option value="Marassi">Marassi</option>
+                <option value="Zed East">Zed East</option>
+            </select>
+            <select id="filter-unit" onchange="filterListings('Rent')">
+                <option value="">All Unit Types</option>
+                <option value="Standalone">Standalone</option>
+                <option value="Twin House">Twin House</option>
+                <option value="Town House">Town House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Chalet">Chalet</option>
+            </select>
+        </div>
+
+        <div class="property-grid" id="listings-grid">
+            <!-- Properties injected by JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Real Estate Management System. All rights reserved.</p>
+        <p>Developed by: Youssef Mohammed Ebrahim, Abd El-Latif Mohammed, Moaz Nader, Youssef Mohammed Salah, Mohab
+            Mahmoud</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof applySmartSearchFilter === 'function') {
+                applySmartSearchFilter();
+            }
+            if (typeof renderAllListings === 'function') {
+                renderAllListings('Rent');
+            }
+        });
+    </script>
+</body>
+
+</html>

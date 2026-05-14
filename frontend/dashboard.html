@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate | Owner Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.7l6 5.3v9h-2v-6H8v6H6v-9l6-5.3z" />
+            </svg>
+            Real Estate
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="new_projects.html">New Projects</a></li>
+                <li><a href="dashboard.html" class="active">Add Property</a></li>
+                <li><a href="login.html" class="btn btn-outline">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container form-page">
+        <div class="form-container">
+            <h2>Add New Property</h2>
+            <form id="add-property-form" onsubmit="addProperty(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="prop-title">Property Title</label>
+                        <input type="text" id="prop-title" required placeholder="e.g. Modern Villa with Pool">
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-developer">Developer</label>
+                        <select id="prop-developer" required>
+                            <option value="" disabled selected>Select Developer</option>
+                            <option value="Emaar Misr">Emaar Misr</option>
+                            <option value="Ora">Ora</option>
+                            <option value="Palm Hills">Palm Hills</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-project">Project Name</label>
+                        <input type="text" id="prop-project" required placeholder="e.g. Palm Hills October">
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-price">Price ($)</label>
+                        <input type="number" id="prop-price" required placeholder="e.g. 500000">
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-area">Area/Location</label>
+                        <input type="text" id="prop-area" required placeholder="e.g. Downtown">
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-bua">BUA (Sqm)</label>
+                        <input type="number" id="prop-bua" required placeholder="e.g. 350">
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-rooms">Bedrooms</label>
+                        <input type="number" id="prop-rooms" required placeholder="e.g. 4">
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-bathrooms">Bathrooms</label>
+                        <input type="number" id="prop-bathrooms" required placeholder="e.g. 3">
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-type">Listing Type</label>
+                        <select id="prop-type" required>
+                            <option value="Sale">For Sale</option>
+                            <option value="Rent">For Rent</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-unit-type">Unit Type</label>
+                        <select id="prop-unit-type" required>
+                            <option value="" disabled selected>Select Unit Type</option>
+                            <option value="Standalone">Standalone</option>
+                            <option value="Twin House">Twin House</option>
+                            <option value="Town House">Town House</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Chalet">Chalet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="prop-image-file">Property Image</label>
+                        <input type="file" id="prop-image-file" accept="image/*" required>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label>Amenities</label>
+                        <div class="amenities-checkbox-group">
+                            <label><input type="checkbox" value="Balcony" class="prop-amenity"> Balcony</label>
+                            <label><input type="checkbox" value="Private Pool" class="prop-amenity"> Private
+                                Pool</label>
+                            <label><input type="checkbox" value="Security" class="prop-amenity"> Security</label>
+                            <label><input type="checkbox" value="Central AC" class="prop-amenity"> Central AC</label>
+                            <label><input type="checkbox" value="Garden" class="prop-amenity"> Garden</label>
+                        </div>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="prop-desc">Description</label>
+                        <textarea id="prop-desc" rows="4" required placeholder="Describe the property..."></textarea>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="owner-phone">Owner Phone</label>
+                        <input type="tel" id="owner-phone" required placeholder="e.g. +20 115 495 2445">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" style="margin-top: 1rem;">Add Property</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Real Estate Management System. All rights reserved.</p>
+        <p>Developed by: Youssef Mohammed Ebrahim, Abd El-Latif Mohammed, Moaz Nader, Youssef Mohammed Salah, Mohab
+            Mahmoud</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

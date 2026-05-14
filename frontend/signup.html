@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate | Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.7l6 5.3v9h-2v-6H8v6H6v-9l6-5.3z" />
+            </svg>
+            Real Estate
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="new_projects.html">New Projects</a></li>
+                <li><a href="dashboard.html">Add Property</a></li>
+                <li><a href="login.html" class="active btn btn-outline">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container form-page center-form">
+        <div class="form-container login-container">
+            <h2>Create an Account</h2>
+            <form id="signup-form" onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required placeholder="e.g. Yusuf Salah">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="yusuf@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+                <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Real Estate Management System. All rights reserved.</p>
+        <p>Developed by: Youssef Mohammed Ebrahim, Abd El-Latif Mohammed, Moaz Nader, Youssef Mohammed Salah, Mohab
+            Mahmoud</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
